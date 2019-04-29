@@ -1,0 +1,30 @@
+{
+    "model": "Dongzw",
+    "learning_rate": 0.0001,
+    "weights_regularize_lambda": 0.0001,
+    "three_class_regularize_lambda": 0.8,
+    "try_to_validate": false,
+    "keep_prob": 0.9,
+    "batch_size": 40,
+    "input_image_size": 180,
+    "lambda_level1": 0.15,
+    "lambda_level2": 0.15,
+    "lambda_level3": 0.15,
+    "lambda_label": 0.55,    
+
+    "epochs": 1000,
+    "TRAIN_SIZE": 996128,
+    "VALID_SIZE": 10024,
+    "TEST_SIZE": 947203,
+
+    "original_data_root_dir": "E:\\kaggle\\Dataset\\imaterialist-product-2019",
+    "train_file_path": "/mnt/sdb2/kaggle/code-v5.0/data/train_image_on_level_classifications.tfrecords",
+    "valid_file_path":  "/mnt/sdb2/kaggle/code-v5.0/data/valid_image_on_level_classifications.tfrecords",
+    "test_file_path": "/mnt/sdb2/kaggle/code-v5.0/data/test_image_on_level_classifications.tfrecords",
+    "final_model_path": "./checkpoint/final_model",
+    "restored_path": "./checkpoint/saver",
+
+    "saver_root_dir": "./checkpoint/saver",
+    "tensorboard_root_dir": "./checkpoint/tensorboard",
+    "log_step": 20
+}
