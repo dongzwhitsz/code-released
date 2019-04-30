@@ -96,7 +96,13 @@ class Dongzw_V3():
             tf.add_to_collection('three_class_regularizer', three_class_regularizer)
             _la = tf.stack([label_logits, label_logits, label_logits], axis=1)
             _equal = tf.cast(tf.equal(softmax_i, _la), tf.float32)
-            accuracy = tf.reduce_mean(tf.reduce_sum(_equal, axis=1))            
+            accuracy = tf.reduce_mean(tf.reduce_sum(_equal, axis=1))   
+
+            argmax = tf.cast(tf.math.argmax(self.softmax4, axis=1), tf.int32)
+            self.acc = tf.reduce_mean(
+                tf.cast(tf.equal(argmax, label_logits), tf.float32)
+            )
+            tf.summary.scalar('acc', self.acc)
 
         with tf.variable_scope('loss'):
             regularization = tf.add_n(tf.get_collection("fc_regularizer")) +  tf.add_n(tf.get_collection('three_class_regularizer'))
