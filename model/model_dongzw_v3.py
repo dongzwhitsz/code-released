@@ -51,8 +51,10 @@ class Dongzw_V3():
             pool8 = self._pool(conv7, 2, 2, name='pool8')
 
             fc9 = self._fc(pool8, 1024, name='fc9', flatten=True, is_bn=True, relu=True)
-            if self.is_training is True:
-                fc9 = tf.nn.dropout(fc9, keep_prob=self.keep_prob)
+            # if self.is_training is True:
+            #     fc9 = tf.nn.dropout(fc9, keep_prob=self.keep_prob)
+
+            fc9 = self._batch_norm_layer(fc9, 'fc9_batch_norm')
 
             fc_1 = self._fc(fc9, 5, 'fc_1', relu=False, flatten=False, is_bn=False)
             fc_2 = self._fc(fc9, 14, 'fc_2', relu=False, flatten=False, is_bn=False)
