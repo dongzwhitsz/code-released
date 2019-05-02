@@ -19,5 +19,5 @@
    7. "input_image_size": Control the input image size of your model. It shouldn't be changed when your saved your model ever.
    8. "lambda_level1": A parameter to control the weight of the product tree level 1 loss of a sub-classification task.
    9. "lambda_level2": A parameter to control the weight of the product tree level 2 loss of a sub-classification task.
-   10."lambda_level3": A parameter to control the weight of the product tree level 3 loss of a sub-classification task.
-   11."lambda_label": A parameter to control the weight of the image label loss of the main-classification task.
+   10. "lambda_level3": A parameter to control the weight of the product tree level 3 loss of a sub-classification task.
+   11. "lambda_label": A parameter to control the weight of the image label loss of the main-classification task.
