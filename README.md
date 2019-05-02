@@ -8,7 +8,7 @@
  - You should just run python ./train.py to train your specific network or run python ./predict.py to get the trained model's predition in your test dataset and get your submission in the csv format. Absolutely, you should make your model be visual in the ./utils.py.
  - You should just set the specific network in the config.json. You can change your hyperparameters in the process of train to change it by your ideas. This will be in work immediately. And when the try_to_validate is set true, the train will be in a state of validation in validation dataset. Make sure the try_to_validate item is set to false before the validation is over.
  
- ### Hyperparameters Detail of the config.json
+ ### Hyperparameters Details of the config.json
  
    1. "learning_rate": If the value is negtive, the train will change by the setting before according the train epoch. If you change in the json file when the train is running, the setting will work in a second. Try to change it by the assist of the tensorboard.
    2. "weights_regularize_lambda": A hyperparater controls the fully connected layers' weights regularization. A effective controlling parameter to avoid the overfit.
